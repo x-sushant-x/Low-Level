@@ -12,5 +12,7 @@ CHIP Or16 {
     OUT out[16];
 
     PARTS:
-    //// Replace this comment with your code.
+    Not16(in=a, out=aNot);
+    Not16(in=b, out=bNot);
+    Nand16(a=aNot, b=bNot, out=out);
 }
